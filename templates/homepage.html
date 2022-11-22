@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block title %} Homepage {% endblock %}}
+
+{% block content %}
+
+
+{% for p in pet %}
+<ul>
+    <li>
+
+    <img src="{{ p.image_url() }}" class='pet_img'/>
+
+    <p class="pet-details">
+    {{p.name}}
+    {% if p.available %}
+    <b> - Available</b>
+    {% endif %}
+    {% if p.available == False %}
+    <b> - Adopted</b>
+    {% endif %}
+
+    <br>
+
+    Species: {{p.species}}
+
+    <br>
+
+    Age: {{p.age}}
+
+    <br>
+
+    {% if p.notes %}
+    Notes: {{p.notes}}
+    {% endif%}
+    </p>
+
+    <form>
+        <button formmethod='GET'
+                formaction="/{{p.id}}"
+                class='edit-btn'>
+                Edit
+        </button>
+    </form>
+
+    </li>
+</ul>
+{% endfor %}
+
+{% endblock %}
+

@@ -1,0 +1,48 @@
+/* base.html */
+
+body {
+    /* Unsplash freesource image */
+    background-image: url('https://images.unsplash.com/photo-1589112944342-7115fe90c015?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1285&q=80');
+}
+
+h1 {
+    color: white;
+}
+
+.nav-bar {
+    padding-right: 10px;
+    background-color: rgb(160, 211, 228);
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    padding-left: 10px;
+}
+a:hover {
+    color: rgb(255, 255, 255)
+}
+
+/* homepage.html */
+
+.pet_img {
+    width: 200px;
+    height: 200px;
+}
+
+ul {
+    list-style: none;
+}
+
+.pet-details {
+    color: white;
+    margin-top: 0;
+}
+
+/* add_pet.html */
+
+#add-pet-form {
+    padding-left: 10px;
+    color: white;
+}
